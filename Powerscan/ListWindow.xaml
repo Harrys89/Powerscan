@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Powerscan" d:DataContext="{d:DesignInstance Type=local:AdressEntry}"
         mc:Ignorable="d"
-        Title="ListWindow" Height="520" Width="780"
+        Title="ListWindow" Height="540" Width="780"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
     <Canvas Background="Transparent">
@@ -76,7 +76,7 @@
     Width="100"
     Height="20"
     FontSize="14"
-    Padding="-2"
+    Padding="0,0,0,0"
     FontWeight="Bold"
     Foreground="Black"
     Background="LightGray"
@@ -90,7 +90,8 @@
             Canvas.Top="450"
             Canvas.Left="30"
             FontSize="14"
-            FontWeight="Bold" Click="zuruecksetzenbtn_Click">
+            FontWeight="Bold" Click="zuruecksetzenbtn_Click"
+                Padding="0,0,0,0">
             Zurücksetzen
         </Button>
         <Button x:Name="filterbtn"
@@ -99,7 +100,8 @@
                 Canvas.Top="450"
                 Canvas.Left="160"
                 FontSize="14"
-                FontWeight="Bold" Click="filterbtn_Click">
+                FontWeight="Bold" Click="filterbtn_Click"
+                Padding="0,0,0,0">
             Filter
         </Button>
         <Button x:Name="suchenbtn"
@@ -108,7 +110,8 @@
                 Canvas.Top="450"
                 Canvas.Left="300"
                 FontSize="14"
-                FontWeight="Bold" Click="suchenbtn_Click">
+                FontWeight="Bold" Click="suchenbtn_Click"
+                Padding="0,0,0,0">
             Suchen
         </Button>
         <Button x:Name="vollstaendigelistebtn"
@@ -117,9 +120,10 @@
                 Canvas.Top="450"
                 Canvas.Left="420"
                 FontSize="14"
-                FontWeight="Black"
+                FontWeight="Bold"
+                Padding="0,0,0,0"
                 Click="vollstaendigelistebtn_Click">
-            Vollsändige liste anzeigen 
+            Vollständige Liste anzeigen 
         </Button>
         <Label x:Name="eintragsdatumlbl"
         FontSize="14"

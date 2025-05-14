@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Powerscan"
         mc:Ignorable="d"
-        Title="FilterWindow" Height="350" Width="300">
+        Title="FilterWindow" Height="350" Width="300"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Canvas>
         <Label x:Name="idNrlbl"
                FontSize="14"

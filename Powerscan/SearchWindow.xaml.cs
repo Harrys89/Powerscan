@@ -27,10 +27,10 @@ namespace Powerscan
 
         private void Searchaction()
         {
-            // 1. Suchbegriff holen
+            // 1. Get the search term from the TextBox
             string suchbegriff = suchentxtbx.Text?.Trim();
 
-            // 2. Alle Checkboxen prüfen
+            // Check all Checkboxes
             var aktiveCheckboxen = new List<CheckBox>
     {
         idNrSuchenchkbx,
@@ -44,7 +44,7 @@ namespace Powerscan
         raumSuchenchkbx
     }.Where(cb => cb.IsChecked == true).ToList();
 
-            // 3. Prüfen: genau 1 Checkbox & nicht leer
+            // 3. Checks: If no checkbox is checked or more than one checkbox is checked
             if (aktiveCheckboxen.Count != 1)
             {
                 MessageBox.Show("Bitte genau **eine** Kategorie auswählen, nach der gesucht werden soll.", "Fehler", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -57,7 +57,7 @@ namespace Powerscan
                 return;
             }
 
-            // 4. Suche in Liste (Beispiel: Zugriff auf ViewModel von Owner)
+            // 4. Search in the selected column
             if (Owner is ListWindow listWindow && listWindow.VM is ViewModel vm)
             {
                 var treffer = vm.GetAllEntries().Where(entry =>
@@ -83,13 +83,18 @@ namespace Powerscan
                 foreach (var eintrag in treffer)
                     vm.Daten.Add(eintrag);
 
-                this.Close(); // Fenster schließen nach erfolgreicher Suche
+                this.Close(); // Close the search window after the search
             }
         }
 
         private void suchenbtn_Click(object sender, RoutedEventArgs e)
         {
             Searchaction();
+        }
+
+        private void abbrechensuchenbtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

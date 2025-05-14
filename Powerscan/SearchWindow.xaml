@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Powerscan"
         mc:Ignorable="d"
-        Title="SearchWindow" Height="260" Width="330">
+        Title="SearchWindow" Height="260" Width="330"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Canvas>
         <Label x:Name="suchauswahllbl"
                Content="Wählen Sie aus was Sie suchen möchten:"
@@ -107,7 +109,7 @@
                 FontWeight="Bold"
                 Width="100"
                 Canvas.Right="20"
-                Canvas.Top="200">
+                Canvas.Top="200" Click="abbrechensuchenbtn_Click">
             Abbrechen
         </Button>
     </Canvas>
