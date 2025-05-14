@@ -1,0 +1,114 @@
+﻿<Window x:Class="Powerscan.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Powerscan"
+        mc:Ignorable="d"
+        Title="SearchWindow" Height="260" Width="330">
+    <Canvas>
+        <Label x:Name="suchauswahllbl"
+               Content="Wählen Sie aus was Sie suchen möchten:"
+               FontSize="14"
+               FontWeight="Bold"
+               Canvas.Left="20"
+               Canvas.Top="20"/>
+        <TextBlock Text="?"
+                   Foreground="Gray"
+                   FontSize="14"
+                   Cursor="Hand"
+                   FontWeight="Bold"
+                   Canvas.Left="293"
+                   Canvas.Top="23"
+                   >
+            <TextBlock.ToolTip>
+                Bitte wählen Sie in der Checkbox was Sie suchen und geben dessen Name ein. Es ist nur eine Checkbox pro Suche erlaubt.
+            </TextBlock.ToolTip>
+            </TextBlock>
+        <Label x:Name="nameSuchelbl"
+               FontSize="14"
+               FontWeight="Bold"
+               Canvas.Top="140"
+               Canvas.Left="20">
+            Name:
+        </Label>
+            <CheckBox x:Name="idNrSuchenchkbx"
+                  Content="Id Nr."
+                  FontWeight="Bold"
+                  Canvas.Left="20"
+                  Canvas.Top="60"
+                  IsChecked="False"/>
+        <CheckBox x:Name="unterzaehlerIdSuchenchkbx"
+                  Content="Unterzähler Id"
+                  FontWeight="Bold"
+                  Canvas.Left="80"
+                  Canvas.Top="60"
+                  IsChecked="False"/>
+        <CheckBox x:Name="postleitzahlSuchenchkbx"
+                  Content="Postleitzahl"
+                  FontWeight="Bold"
+                  Canvas.Left="190"
+                  Canvas.Top="60"
+                  IsChecked="False"/>
+        <CheckBox x:Name="ortSuchenchkbx"
+                  Content="Ort"
+                  FontWeight="Bold"
+                  Canvas.Left="20"
+                  Canvas.Top="80"
+                  IsChecked="False"/>
+        <CheckBox x:Name="strasseSuchenchkbx"
+                  Content="Strasse"
+                  FontWeight="Bold"
+                  Canvas.Left="80"
+                  Canvas.Top="80"
+                  IsChecked="False"/>
+        <CheckBox x:Name="hausnummerSuchenchkbx"
+                  Content="Hausnummer"
+                  FontWeight="Bold"
+                  Canvas.Left="190"
+                  Canvas.Top="80"
+                  IsChecked="False"/>
+        <CheckBox x:Name="etageSuchenchkbx"
+                  Content="Etage"
+                  FontWeight="Bold"
+                  Canvas.Left="20"
+                  Canvas.Top="100"
+                  IsChecked="False"/>
+        <CheckBox x:Name="gebaeudeSuchenchkbx"
+                  Content="Gebäude"
+                  FontWeight="Bold"
+                  Canvas.Left="80"
+                  Canvas.Top="100"
+                  IsChecked="False"/>
+        <CheckBox x:Name="raumSuchenchkbx"
+                  Content="Raum"
+                  FontWeight="Bold"
+                  Canvas.Left="190"
+                  Canvas.Top="100"
+                  IsChecked="False"/>
+        <TextBox x:Name="suchentxtbx"
+                 Canvas.Left="80"
+                 Canvas.Top="145"
+                 FontWeight="Black"
+                 FontSize="12"
+                 Height="20"
+                 Width="210">
+        </TextBox>
+        <Button x:Name="suchenbtn"
+                FontSize="12"
+                FontWeight="Bold"
+                Width="100"
+                Canvas.Left="20"
+                Canvas.Top="200" Click="suchenbtn_Click">
+            Suchen
+        </Button>
+        <Button x:Name="abbrechensuchenbtn"
+                FontSize="12"
+                FontWeight="Bold"
+                Width="100"
+                Canvas.Right="20"
+                Canvas.Top="200">
+            Abbrechen
+        </Button>
+    </Canvas>
+</Window>

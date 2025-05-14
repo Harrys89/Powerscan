@@ -1,0 +1,208 @@
+﻿
+<Window x:Class="Powerscan.EntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Powerscan"
+        mc:Ignorable="d"
+        Title="EntryWindow" Height="550" Width="600"
+        Background="Black"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <!-- Blitz-Hintergrund -->
+        <Canvas x:Name="LightningCanvas" 
+                Background="Transparent" 
+                Panel.ZIndex="0"/>
+
+        <!-- UI-Vordergrund -->
+        <Canvas x:Name="UiCanvas" 
+                Background="Transparent" 
+                Panel.ZIndex="1">
+            <!-- Deine Labels, TextBoxen und Buttons hier eingefügt -->
+            <Label x:Name="plzlbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="30" 
+                   Content="PLZ:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="plztxtbx" 
+                     Canvas.Left="250" 
+                     Canvas.Top="30" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray"
+                     Foreground="Black"
+                     Text="{Binding ZipCode, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="ortlbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="70" 
+                   Content="Ort:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="orttxtbx" 
+                     Canvas.Left="250" 
+                     Canvas.Top="70" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray"
+                     Foreground="Black"
+                     Text="{Binding City, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="strasselbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="110" 
+                   Content="Straße:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="strassetxtbx" 
+                     Canvas.Left="250" 
+                     Canvas.Top="110" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding Street, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="hausnummerlbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="150" 
+                   Content="Hausnummer:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="hausnummertextbox"
+                     Canvas.Left="250" 
+                     Canvas.Top="150" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding Housenumber, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="gebaeudelbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="190" 
+                   Content="Gebäude:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="gebaeudetextbox"
+                     Canvas.Left="250" 
+                     Canvas.Top="190" 
+                     Width="200"
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold"
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding Building, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="etagelbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="230" 
+                   Content="Etage:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="etagtextbox"
+                     Canvas.Left="250" 
+                     Canvas.Top="230" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold"
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding Floor, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="raumlbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="270" 
+                   Content="Raum:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="raumtxtbx"
+                     Canvas.Left="250" 
+                     Canvas.Top="270" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding Room, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="zaehleridlbl"
+                   Canvas.Left="50" 
+                   Canvas.Top="310" 
+                   Content="ZählerID:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="zaehleridtxtbx"
+                     Canvas.Left="250" 
+                     Canvas.Top="310" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold"
+                     Background="LightGray" 
+                     Foreground="Black"
+                     Text="{Binding MeterId, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <Label x:Name="stromkostenlbl" 
+                   Canvas.Left="50" 
+                   Canvas.Top="350" 
+                   Content="Kosten KWh:" 
+                   FontSize="25" 
+                   FontWeight="Bold" 
+                   Foreground="White"/>
+            <TextBox x:Name="kostentxtbx" 
+                     Canvas.Left="250" 
+                     Canvas.Top="350" 
+                     Width="200" 
+                     Height="30" 
+                     FontSize="20" 
+                     FontWeight="Bold" 
+                     Background="LightGray" 
+                     Foreground="Black"
+                     PreviewTextInput="CostsTextBox_PreviewTextInput"
+                     PreviewKeyDown="CostsTextBox_PreviewKeyDown"/>
+
+            <Button x:Name="abbrechenbtn"
+                    Canvas.Left="50" 
+                    Canvas.Top="470"
+                    Width="200" 
+                    Height="30" 
+                    Content="Abbrechen" 
+                    FontSize="20" 
+                    FontWeight="Bold" 
+                    Background="LightGray" Click="abbrechenbtn_Click"/>
+            <Button x:Name="speichernbtn"
+                    Canvas.Left="350"
+                    Canvas.Top="470"
+                    Width="200"
+                    Height="30" 
+                    Content="Speichern"
+                    FontSize="20" 
+                    FontWeight="Bold"
+                    Background="LightGray" Click="speichernbtn_Click"/>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,90 @@
+﻿<Window x:Class="Powerscan.FilterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Powerscan"
+        mc:Ignorable="d"
+        Title="FilterWindow" Height="350" Width="300">
+    <Canvas>
+        <Label x:Name="idNrlbl"
+               FontSize="14"
+               FontWeight="Bold"
+               Canvas.Top="20"
+               Canvas.Left="20">
+            <TextBlock>
+            Wählen Sie die Filter aus die in der Liste
+                <LineBreak/>
+                nicht angezeigt werden sollen:
+            </TextBlock>
+        </Label>
+        <CheckBox x:Name="idNrchkbx"
+                  Content="Id Nr."
+                  FontWeight="Bold"
+                  IsChecked="True"
+                  Canvas.Left="20"
+                  Canvas.Top="80"/>
+        <CheckBox x:Name="unterzaehkerIdchkbx"
+                  Content="Unterzähler Id."
+                  FontWeight="Bold"
+                  IsChecked="True"
+                  Canvas.Left="20"
+                  Canvas.Top="100"/>
+        <CheckBox x:Name="plzchkbx"
+                  Content="Postleitzahl"
+                  FontWeight="Bold"
+                  IsChecked="True"
+                  Canvas.Left="20"
+                  Canvas.Top="120"/>
+        <CheckBox x:Name="ortchkbx"
+                  Content="Ort"
+                  FontWeight="Bold"
+                  IsChecked="True"
+                  Canvas.Left="20"
+                  Canvas.Top="140"/>
+        <CheckBox x:Name="strassechkbx"
+                  Content="Straße"
+                  FontWeight="Bold"
+                  IsChecked="True"
+                  Canvas.Left="20"
+                  Canvas.Top="160"/>
+        <CheckBox x:Name="hausnummerchkbx"
+          Content="Hausnummer"
+          FontWeight="Bold"
+          IsChecked="True"
+          Canvas.Left="20"
+          Canvas.Top="180"/>
+        <CheckBox x:Name="Gebaeudechkbx"
+          Content="Gebäude"
+          FontWeight="Bold"
+          IsChecked="True"
+          Canvas.Left="20"
+          Canvas.Top="200"/>
+        <CheckBox x:Name="etagechkbx"
+          Content="Etage"
+          FontWeight="Bold"
+          IsChecked="True"
+          Canvas.Left="20"
+          Canvas.Top="220"/>
+        <CheckBox x:Name="raumchkbx"
+          Content="Raum"
+          FontWeight="Bold"
+          IsChecked="True"
+          Canvas.Left="20"
+          Canvas.Top="240"/>
+        <Button x:Name="filteranwendenbtn"
+                Height="20"
+                Width="Auto"
+                Canvas.Left="20"
+                Canvas.Top="280" Click="filteranwendenbtn_Click">
+            Filter anwenden
+        </Button>
+        <Button x:Name="filterabbrechenbtn"
+                Height="20"
+                Width="Auto"
+                Canvas.Top="280"
+                Canvas.Left="200" Click="filterabbrechenbtn_Click">
+            Abbrechen
+        </Button>
+    </Canvas>
+</Window>

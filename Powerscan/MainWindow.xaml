@@ -1,0 +1,61 @@
+﻿<Window x:Class="Powerscan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Powerscan"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="465" Width="600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Canvas>
+        <Image Source="/Images/Zaehler.png"
+           Width="685"
+           Canvas.Top="-50" 
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top" 
+           Height="607" Canvas.Left="-4"/>
+        <Label x:Name="applabel"
+           FontFamily="Monotype Corsiva"
+           FontSize="54"
+           FontWeight="Bold"
+           Foreground="Yellow"
+           Canvas.Left="338"
+           Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center"
+        >Powerscan
+        </Label>
+        <Button x:Name="eintragenbtn"
+           Width="200"
+           Height="30"
+           FontSize="20"
+           FontWeight="Bold"
+           Foreground="Red"
+           Background="LightGray"
+           Canvas.Top="150"
+           Canvas.Left="350" Click="eintragenbtn_Click"
+        >Neuer Eintrag
+        </Button>
+        <Button x:Name="listebtn"
+           Width="200"
+           Height="30"
+           FontSize="20"
+           FontWeight="Bold"
+           Foreground="Red"
+           Background="LightGray"
+           Canvas.Top="200"
+           Canvas.Left="350" Click="listebtn_Click" 
+        >Liste anzeigen
+        </Button>
+        <Button x:Name="progschliessenbtn"
+           Width="200"
+           Height="30"
+           FontSize="20"
+           FontWeight="Bold"
+           Foreground="Black"
+           Background="Red"
+           Canvas.Top="380"
+           Canvas.Left="350" Click="progschliessenbtn_Click" 
+       >Programm Schließen
+        </Button>
+    </Canvas>
+</Window>
