@@ -6,14 +6,6 @@ Powerscan is a Windows desktop application (WPF) designed to help manage and mon
 
 ---
 
-## 📸 Screenshots
-
-| Entry Form                          | Meter List                          |
-|------------------------------------|-------------------------------------|
-| ![EntryWindow](screenshots/entry.png) | ![ListWindow](screenshots/list.png) |
-
----
-
 ## 🧩 Features
 
 - ✅ Add new meter entries with full address & location details (ZIP, building, room, etc.)
